@@ -1,5 +1,7 @@
 # Changed from Neovim from scratch
 
+此文件在~/.config/nvim
+
 运行vim会自动运行配置
 
 ## Get healthy

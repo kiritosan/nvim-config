@@ -58,12 +58,17 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+  use "andymass/vim-matchup"
+  use "tpope/vim-dispatch"
+  use "danilamihailov/beacon.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "glepnir/zephyr-nvim" -- remove it beacuse lua in treesitter isn't woring correctly!
   use "arcticicestudio/nord-vim"
-  use 'folke/tokyonight.nvim'
+  use "lunarvim/darkplus.nvim"
+  use "folke/tokyonight.nvim"
+  use "rebelot/kanagawa.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
