@@ -1,19 +1,6 @@
-# Neovim from scratch
+# Changed from Neovim from scratch
 
-Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
-
-## Try out this config
-
-Make sure to remove or move your current `nvim` directory
-
-**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
-```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
-```
-
-Run `nvim` and wait for the plugins to be installed 
-
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+运行vim会自动运行配置
 
 ## Get healthy
 
@@ -63,3 +50,5 @@ Next we need to install python support (node is optional)
 > The computing scientist's main challenge is not to get confused by the complexities of his own making. 
 
 \- Edsger W. Dijkstra
+
+复制粘贴问题目前没有解决
