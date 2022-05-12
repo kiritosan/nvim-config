@@ -4,9 +4,17 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
+local previewers = require "telescope.previewers"
+
 
 telescope.setup {
   defaults = {
+
+    -- set previewers   can't work??? TODO
+    file_previewer = previewers.vim_buffer_cat.new,
+    grep_previewer = previewers.vim_buffer_vimgrep.new,
+    qflist_previewer = previewers.vim_buffer_qflist.new,
+    layout_strategy = "flex",
 
     prompt_prefix = " ",
     selection_caret = " ",
