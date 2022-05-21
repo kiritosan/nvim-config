@@ -10,11 +10,15 @@ local previewers = require "telescope.previewers"
 telescope.setup {
   defaults = {
 
+    previewer = true,
     -- set previewers   can't work??? TODO
     file_previewer = previewers.vim_buffer_cat.new,
     grep_previewer = previewers.vim_buffer_vimgrep.new,
     qflist_previewer = previewers.vim_buffer_qflist.new,
-    layout_strategy = "flex",
+    -- layout_strategy = "flex",
+    preview_cutoff = 1,
+    --
+    -- buffer_previewer_maker = previewers.buffer_previewer_maker,
 
     prompt_prefix = " ",
     selection_caret = " ",

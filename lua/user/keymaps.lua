@@ -60,8 +60,21 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- ouline by Vista plugin
+-- outline by Vista plugin
 keymap("n", "<F8>", ":Vista nvim_lsp<CR>", opts)
+
+-- https://stackoverflow.com/questions/33476472/why-asterisk-immediately-go-to-the-next-occurrence-in-vim
+-- vim-asterisk plugin config
+keymap("n", "*", "<Plug>(asterisk-*)", opts)
+keymap("n", "#", "<Plug>(asterisk-#)", opts)
+keymap("n", "g*", "<Plug>(asterisk-g*)", opts)
+keymap("n", "g#", "<Plug>(asterisk-g#)", opts)
+keymap("n", "z*", "<Plug>(asterisk-z*)", opts)
+keymap("n", "z#", "<Plug>(asterisk-z#)", opts)
+keymap("n", "gz*", "<Plug>(asterisk-gz*)", opts)
+keymap("n", "gz#", "<Plug>(asterisk-gz#)", opts)
+-- let g:asterisk#keeppos = 1 -- how to change it to lua scripts
+
 
 -- Terminal --
 -- Better terminal navigation

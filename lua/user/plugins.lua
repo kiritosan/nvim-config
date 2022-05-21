@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use "andymass/vim-matchup"
   use "tpope/vim-dispatch"
   use "danilamihailov/beacon.nvim"
+  use "haya14busa/vim-asterisk" -- use gcA to comment. Enforce the power of *  https://vi.stackexchange.com/questions/18894/how-do-i-use-cgn-for-word-under-cursor
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
