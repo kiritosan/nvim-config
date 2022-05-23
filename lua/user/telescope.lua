@@ -4,25 +4,48 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
-local previewers = require "telescope.previewers"
+
+-- https://github.com/ravenxrz/dotfiles/blob/master/nvim/lua/user/conf/telescope.lua
+-- disable preview binaries
+-- local previewers = require("telescope.previewers")
+-- local Job = require("plenary.job")
+-- local new_maker = function(filepath, bufnr, opts)
+--   filepath = vim.fn.expand(filepath)
+--   Job:new({
+--     command = "file",
+--     args = { "--mime-type", "-b", filepath },
+--     on_exit = function(j)
+--       local mime_type = vim.split(j:result()[1], "/")[1]
+--       if mime_type == "text" then
+--         previewers.buffer_previewer_maker(filepath, bufnr, opts)
+--       else
+--         -- maybe we want to write something to the buffer here
+--         vim.schedule(function()
+--           vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "BINARY" })
+--         end)
+--       end
+--     end
+--   }):sync()
+-- end
 
 
 telescope.setup {
   defaults = {
-
-    previewer = true,
-    -- set previewers   can't work??? TODO
-    file_previewer = previewers.vim_buffer_cat.new,
-    grep_previewer = previewers.vim_buffer_vimgrep.new,
-    qflist_previewer = previewers.vim_buffer_qflist.new,
-    -- layout_strategy = "flex",
-    preview_cutoff = 1,
-    --
-    -- buffer_previewer_maker = previewers.buffer_previewer_maker,
+    -- buffer_previewer_maker = new_maker,
 
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    -- path_display = {
+    --   shorten= {
+    --     -- e.g. for a path like
+    --     --   `alpha/beta/gamma/delta.txt`
+    --     -- setting `path_display.shorten = { len = 1, exclude = {1, -1} }`
+    --     -- will give a path like:
+    --     --   `alpha/b/g/delta.txt`
+    --     len = 3, exclude = {1, -1}
+    --   },
+    -- },
 
     mappings = {
       i = {
@@ -90,6 +113,13 @@ telescope.setup {
     },
   },
   pickers = {
+    -- find_files = {
+    --   theme = "dropdown",
+    --   previewer = false,
+    --   -- find_command = { "find", "-type", "f" },
+    --   find_command = {"fd"},
+    -- },
+
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
@@ -106,3 +136,6 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+-- 不是预览的插件
+-- telescope.load_extension('live_grep_raw')

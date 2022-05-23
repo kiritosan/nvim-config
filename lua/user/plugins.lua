@@ -60,8 +60,9 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "andymass/vim-matchup"
   use "tpope/vim-dispatch"
-  use "danilamihailov/beacon.nvim"
+  -- use "danilamihailov/beacon.nvim" -- know where the cursor are when jump a lot
   use "haya14busa/vim-asterisk" -- use gcA to comment. Enforce the power of *  https://vi.stackexchange.com/questions/18894/how-do-i-use-cgn-for-word-under-cursor
+  use "phaazon/hop.nvim" -- jump quickly
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -70,6 +71,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   use "rebelot/kanagawa.nvim"
+  use "NTBBloodbath/doom-one.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -90,7 +92,13 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+        -- 显示预览
+        { "nvim-telescope/telescope-live-grep-raw.nvim" }
+    }
+  }
 
   -- Treesitter
   use {
