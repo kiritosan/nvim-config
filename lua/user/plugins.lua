@@ -63,11 +63,15 @@ return packer.startup(function(use)
   -- use "danilamihailov/beacon.nvim" -- know where the cursor are when jump a lot
   use "haya14busa/vim-asterisk" -- use gcA to comment. Enforce the power of *  https://vi.stackexchange.com/questions/18894/how-do-i-use-cgn-for-word-under-cursor
   use "phaazon/hop.nvim" -- jump quickly
+  use "machakann/vim-sandwich"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "glepnir/zephyr-nvim" -- remove it beacuse lua in treesitter isn't woring correctly!
-  use "arcticicestudio/nord-vim"
+  use {
+    "arcticicestudio/nord-vim",
+    branch = "main"
+  }
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   use "rebelot/kanagawa.nvim"
@@ -80,6 +84,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use {'github/copilot.vim', branch = 'release' }
+
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

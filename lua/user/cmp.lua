@@ -123,7 +123,7 @@ cmp.setup {
     select = false,
   },
   experimental = {
-    ghost_text = true,
+    ghost_text = true, -- 语法补全幽灵文字
     native_menu = false
   },
   -- view = {
