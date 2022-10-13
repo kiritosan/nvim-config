@@ -115,6 +115,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
 
   -- for Golang
   use {
